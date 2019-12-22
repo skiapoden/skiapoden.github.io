@@ -92,6 +92,7 @@ nav a {
 	box-shadow: 0 5px 10px white inset;
 	color: black;
 	background-color: #C0C0C0;
+    padding-left: 0.3em;
 }
 
 nav a:focus,
