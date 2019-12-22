@@ -32,6 +32,10 @@ footer{
 	text-align: center;
 }
 
+.tt {
+    font-family: mono;
+}
+
 
 /************ SwitcherButton **************/
 
