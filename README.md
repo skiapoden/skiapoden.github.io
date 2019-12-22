@@ -12,6 +12,7 @@ Project for lecture _Data Visualization_ at HSLU
 - [ ] Visualization
     - [ ] add legend for code, blank, comment
     - [ ] add programming language color legend for current view
+    - [ ] create new data set with fewer repositories
 - [ ] Description
     - [ ] everything
 - [ ] References
