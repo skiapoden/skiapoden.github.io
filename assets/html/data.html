@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>DAVI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" title="Standard" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			data
+		</h1>
+		<hr>
+	</header>
+	<div id="navigation">
+		<nav>
+			<ul>
+				<li>
+					<a href="../../index.html">home</a>
+				</li>
+				<li>
+					<a href="research.html">research</a>
+				</li>
+				<li>
+					<a href="data.html">data</a>
+				</li>
+				<li>
+					<a href="visualization.html">visualization</a>
+				</li>
+				<li>
+					<a href="description.html">description</a>
+				</li>
+				<li>
+					<a href="refrences.html">refrences</a>
+				</li>
+				<li>
+					<a href="about.html">about</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<main>
+		<div id="section">
+			<h4>
+				gocloc
+			</h4>
+			<p>
+				The gocloc utility comes with some command line ﬂags that are very useful for the problem at hand:
+			</p>
+			<ul>
+				<li>
+					--by-file: report results for every encountered source fle
+				</li>
+				<li>
+					--output-type=json: output the report as a JSON data structure
+				</li>
+			</ul>
+			<p>
+				Piped into jq, a JSON fle called sclocstats.json (short for «source lines of code statistics» for a source folder is created within seconds:
+			</p>
+			<img src="../images/gocloc_cli.png" alt="Example Go project" style="height:25px;">
+			<p>
+				The (shortened) data structure looks as follows (slocstats.json) for example:
+			</p>
+			<img src="../images/example_gocloc_json.png" alt="Example Go project" style="height:600px;">
+		</div>
+	</main>
+	<footer>
+		<hr>
+		<p>
+			Patrick Bucher | Stefan Christen |
+			<a href="mailto:patrick.bucher@stud.hslu.ch;stefan.christen@stud.hslu.ch">Mail senden</a>
+		</p>
+	</footer>
+</body>
+
+</html>
