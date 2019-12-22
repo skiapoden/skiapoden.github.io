@@ -51,20 +51,50 @@
 			</p>
 			<ul>
 				<li>
-					--by-file: report results for every encountered source fle
+                    <span class="tt">--by-file</span>: report results for every encountered source file
 				</li>
 				<li>
-					--output-type=json: output the report as a JSON data structure
+                    <span class="tt">--output-type=json</span>: output the report as a JSON data structure
 				</li>
 			</ul>
 			<p>
 				Piped into jq, a JSON fle called sclocstats.json (short for «source lines of code statistics» for a source folder is created within seconds:
 			</p>
-			<img src="../images/gocloc_cli.png" alt="Example Go project" style="height:25px;">
+            <pre>$ gocloc ~/github.com --by-file --output-type=json | jq > slocstats.json</pre>
 			<p>
 				The (shortened) data structure looks as follows (slocstats.json) for example:
 			</p>
-			<img src="../images/example_gocloc_json.png" alt="Example Go project" style="height:600px;">
+            <pre class="tt">{
+  "files": [
+    {
+      "code": 314,
+      "comment": 0,
+      "blank": 30,
+      "name": "patrickbucher/reveal-the-pain/frontend/src/script.js",
+      "Lang": "JavaScript"
+    },
+    {
+      "code": 69,
+      "comment": 0,
+      "blank": 14,
+      "name": "patrickbucher/reveal-the-pain/frontend/src/style.css",
+      "Lang": "CSS"
+    },
+    {
+      "code": 98,
+      "comment": 5,
+      "blank": 22,
+      "name": "patrickbucher/prog/monty_hall/monty_hall.c",
+      "Lang": "C"
+    }
+  ],
+  "total": {
+    "files": 287,
+    "code": 7336,
+    "comment": 86382,
+    "blank": 3938
+  }
+}</pre>
 		</div>
 	</main>
 	<footer>
