@@ -148,3 +148,23 @@ div#infopanel div {
     display: inline-block;
     width: 16%;
 }
+
+div#langlegend {
+    width: 100%;
+    font-size: 10pt;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+div#langlegend div {
+    display: inline-block;
+    width: 160px;
+}
+
+div#langlegend div span.circle {
+    display: inline-block;
+    width: 10pt;
+    height: 10pt;
+    border-radius: 8px;
+    margin-right: 0.5em;
+}

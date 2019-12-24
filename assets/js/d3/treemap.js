@@ -96,8 +96,7 @@ loadColorMap(colorSource).then(function (languageColor) {
         display(root);
 
         function display(d) {
-            // write text into grandparent
-            // and activate click's handler
+            // write text into grandparent and activate click's handler
             grandparent
                 .datum(d.parent)
                 .on("click", transition)
@@ -114,6 +113,8 @@ loadColorMap(colorSource).then(function (languageColor) {
             var stackedLabels = ["Blank", "Comment", "Code"];
             var stackedColors = ["#e5e4e2", "#005f59", "#000000"];
             var dSum = d.data.blank + d.data.comment + d.data.code;
+
+            // TODO: add legend
 
             var yVal = 0;
             var yStart = -margin.top
@@ -209,6 +210,18 @@ loadColorMap(colorSource).then(function (languageColor) {
                     const selector = '#' + generateId(d);
                     d3.select(selector).style('visibility', 'hidden');
                 });
+            const langs = new Set(); 
+            for (const i in d.data.children) {
+                langs.add(d.data.children[i].language);
+            }
+            d3.select('#langlegend').html(function() {
+                let langHTML = '';
+                for (const lang of langs) {
+                    const col = languageColor.get(lang.toLowerCase());
+                    langHTML = langHTML.concat(`<div><span class="circle" style="background-color: ${col};">&nbsp;</span>${lang}</div>`);
+                }
+                return langHTML;
+            });
 
             // On Click to a rect.
             function transition(d) {
@@ -252,23 +265,14 @@ loadColorMap(colorSource).then(function (languageColor) {
             return g;
         }
 
-        /**
-         * Returns text position attributes.
-         * @param text object of json item.
-         */
         function text(text) {
             text.attr("x", function (d) {
                 return x(d.x) + 6;
-            })
-                .attr("y", function (d) {
-                    return y(d.y) + 6;
-                });
+            }).attr("y", function (d) {
+                return y(d.y) + 6;
+            });
         }
 
-        /**
-         * Returns rect position attributes.
-         * @param text object of json item.
-         */
         function rect(rect) {
             rect
                 .attr("x", function (d) {
@@ -288,10 +292,6 @@ loadColorMap(colorSource).then(function (languageColor) {
                 });
         }
 
-        /**
-         * Returns foreign object attributes instead of a text object, allows for text wrapping.
-         * @param foreign 
-         */
         function foreign(foreign) {
             foreign
                 .attr("x", function (d) {
@@ -308,10 +308,6 @@ loadColorMap(colorSource).then(function (languageColor) {
                 });
         }
 
-        /**
-         * Returns pathname for chart header.
-         * @param d current json item. 
-         */
         function name(d) {
             return breadcrumbs(d) +
                 (d.parent
@@ -319,10 +315,6 @@ loadColorMap(colorSource).then(function (languageColor) {
                     : "  Click inside square to zoom in");
         }
 
-        /**
-         * Returns pathname of json item.
-         * @param d current json item. 
-         */
         function breadcrumbs(d) {
             var res = "";
             var sep = "/";
