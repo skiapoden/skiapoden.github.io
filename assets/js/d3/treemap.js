@@ -110,9 +110,10 @@ loadColorMap(colorSource).then(function (languageColor) {
                 .attr("fill", '#f1f0f0');
 
             // stacked bar-chart
-            var dSum = d.data.blank + d.data.comment + d.data.code;
             var stackedData = [d.data.blank, d.data.comment, d.data.code];
+            var stackedLabels = ["Blank", "Comment", "Code"];
             var stackedColors = ["#e5e4e2", "#005f59", "#000000"];
+            var dSum = d.data.blank + d.data.comment + d.data.code;
 
             var yVal = 0;
             var yStart = -margin.top
@@ -124,12 +125,14 @@ loadColorMap(colorSource).then(function (languageColor) {
                     .enter().append("rect")
                     .attr("x", 6 + width -25)
                     .attr("y", function(d, i) {
-                        yVal = yVal + ((height-yStart) / dSum * stackedData[i-1] || 0);
+                        yVal += ((height-yStart) / dSum * stackedData[i-1] || 0);
                         return yStart + yVal;
                     })
                     .attr("width", 25)
                     .attr("height", function(d) { return ((height+margin.top) / dSum * d);})
                     .attr("fill", function(d, i) { return stackedColors[i]; })
+                    .append("title")
+                    .text(function(d, i) { return stackedLabels[i]; });
 
             var g1 = svg.insert("g", ".grandparent")
                 .datum(d)
