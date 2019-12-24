@@ -5,8 +5,8 @@
 "use strict";
 
 const domain = 'https://raw.githubusercontent.com';
-const resource = 'patrickbucher/source-folder-analysis/master/src/data/sourcetree.json';
-const colormap = 'patrickbucher/source-folder-analysis/master/src/data/colormap.json'
+const resource = 'skiapoden/skiapoden.github.io/master/data/sourcetree.json';
+const colormap = 'skiapoden/skiapoden.github.io/master/data/colormap.json'
 const dataSource = `${domain}/${resource}`;
 const colorSource = `${domain}/${colormap}`;
 
