@@ -62,7 +62,7 @@
 			<p>
             Piped into <span class="tt">jq</span> (a command line tool to format and query JSON data structures), a JSON fle called <span class="tt">slocstats.json</span> (short for «source lines of code statistics» for a source folder is created within seconds:
 			</p>
-            <pre>$ gocloc ~/github.com --by-file --output-type=json | jq > slocstats.json</pre>
+            <pre class="tt">>$ gocloc ~/github.com --by-file --output-type=json | jq > slocstats.json</pre>
 			<p>The (shortened) data structure looks as follows (<span class="tt">slocstats.json</span>) for example:</p>
             <pre class="tt">{
   "files": [
@@ -103,9 +103,9 @@
   }
 }</pre>
             <h4>Data Transformation</h4>
-            <p>The data above is in a flat structure: Every entry describes one file in the source code folder tree. In order to visualize the data in a tree map, a hierarchical format is needed. This is achieved with a small utility written in Go, which can be found under <a href="../../data/buildtree.go"><span class="tt">buildtree.go</span></a>. (The script <a href="../../data/run.sh"><span class="tt">run.sh</span></a> shows it's usage.)</p>
+            <p>The data above is in a flat structure: Every entry describes one file in the source code folder tree. In order to visualize the data in a tree map, a hierarchical format is needed. This is achieved with a small utility written in Go, which can be found under <a href="../../data/buildtree.go"><span class="tt">buildtree.go</span></a>. (The script <a href="../../data/run.sh"><span class="tt">run.sh</span></a> shows its usage.)</p>
             <p>The result is a data structure of the following format, which represents source code files and folders in a hierarchical way (excerpt of <span class="tt">sourcetree.json</span>):</p>
-            <pre>{
+            <pre class="tt">{
   "name": "",
   "code": 11096,
   "comment": 14382,
