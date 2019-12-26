@@ -113,9 +113,6 @@ loadColorMap(colorSource).then(function (languageColor) {
             var stackedLabels = ["Blank", "Comment", "Code"];
             var stackedColors = ["#e5e4e2", "#005f59", "#000000"];
             var dSum = d.data.blank + d.data.comment + d.data.code;
-
-            // TODO: add legend
-
             var yVal = 0;
             var yStart = -margin.top
             stacked
