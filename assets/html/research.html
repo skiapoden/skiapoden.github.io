@@ -51,31 +51,29 @@
 			<p>
 				A source code folder is a hierarchical fle system structure that contains
 			</p>
-			<ul>
+			<ol>
 				<li>
 					other folders (projects, modules, sub-modules, etc.), and
 				</li>
 				<li>
 					files (containing source code in diﬀerent languages).
 				</li>
-			</ul>
+			</ol>
 			<p>
-				One possible organization of source code folders is to create a folder for every SCM server in the home
-				directory, e.g. github.com and gitlab.enterpriselab.ch, into the home directory. Within that directory,
-				there is one folder for every group or project, containing multiple repositories.
+                One possible organization of source code folders is to create a folder for every SCM server in the home directory (or a code subfolder thereof), e.g. github.com and gitlab.enterpriselab.ch, into the home directory. Within that directory, there is one folder for every group or project, containing multiple repositories.
 			</p>
 			<p>
 				This are some examples from one of the author’s laptop:
 			</p>
 			<pre class="tt">/home/paedu/github.com/patrickbucher/reversi
-/home/paedu/github.com/patrickbucher/davi
-/home/paedu/github.com/skiapoden/kurtoid
-/home/paedu/gitlab.enterpriselab.ch/iotcourse-h19/arduino-examples
-/home/paedu/gitlab.enterpriselab.ch/iotcourse-h19/makefile-examples</pre>
+/home/paedu/code/github.com/patrickbucher/davi
+/home/paedu/code/github.com/skiapoden/kurtoid
+/home/paedu/code/gitlab.enterpriselab.ch/iotcourse-h19/arduino-examples
+/home/paedu/code/gitlab.enterpriselab.ch/iotcourse-h19/makefile-examples</pre>
 			<p>
 				The structure is always the same:
 			</p>
-			<pre class="tt">/home/[user]/[scm-server]/[group]/[repository]</pre>
+			<pre class="tt">/home/[user]/code/[scm-server]/[group]/[repository]</pre>
 			<p>
 				A repository folder contains other folders. This is an example from the repository px (a command line
 				client written in the Go programming language):
