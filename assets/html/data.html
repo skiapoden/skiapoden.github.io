@@ -60,9 +60,9 @@
 				</li>
 			</ul>
 			<p>
-            Piped into <span class="tt">jq</span> (a command line tool to format and query JSON data structures), a JSON fle called <span class="tt">slocstats.json</span> (short for «source lines of code statistics» for a source folder is created within seconds:
+            Piped into <span class="tt">jq</span> (a command line tool to format and query JSON data structures), a JSON file called <span class="tt">slocstats.json</span> (short for «source lines of code statistics») for a source folder is created within seconds:
 			</p>
-            <pre class="tt">>$ gocloc ~/github.com --by-file --output-type=json | jq > slocstats.json</pre>
+            <pre class="tt">$ gocloc ~/github.com --by-file --output-type=json | jq > slocstats.json</pre>
 			<p>The (shortened) data structure looks as follows (<span class="tt">slocstats.json</span>) for example:</p>
             <pre class="tt">{
   "files": [
@@ -190,7 +190,7 @@
 
 /* thousands of lines omitted */</pre>
             <p>For every source code file, the tree is traversed until the right position in the folder hierarchy is found. During traversal, the statistics for every folder are updated, i.e. the file's statistics are added to the folder's statistics. Since a folder does not have a language per se, the language mostly used in the files contained is set as the folder's language. (This mechanism is rather subject matter for a data structure lecture than a data visualization project, and, thus, not further discussed here.)</p>
-            <p>This structure provides all the information needed to build up a tree map. A color map is further used to map programming languages to background colors.</p>
+            <p>This structure provides all the information needed to build up a tree map. A color map is further used to map programming languages to background colors. (For better recognition, this color map uses the same colors as GitHub does, with some additions.)</p>
 		</div>
 	</main>
 	<footer>
