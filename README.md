@@ -20,10 +20,10 @@ Project for lecture _Data Visualization_ at HSLU
     - [x] Human Perception
     - [ ] Tasks in Data Visualization
     - [x] Interaction Concept
-- [ ] References
+- [x] References
     - [x] Data Source
     - [x] Visualization
-    - [ ] others?
+    - [x] others?
 - [x] About
     - [x] Patrick Bucher
     - [x] Stefan Christen
