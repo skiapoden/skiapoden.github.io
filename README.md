@@ -24,6 +24,6 @@ Project for lecture _Data Visualization_ at HSLU
     - [x] Data Source
     - [x] Visualization
     - [ ] others?
-- [ ] About
+- [x] About
     - [x] Patrick Bucher
-    - [ ] Stefan Christen
+    - [x] Stefan Christen
